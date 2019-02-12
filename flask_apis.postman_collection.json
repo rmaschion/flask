@@ -1,0 +1,222 @@
+{
+	"id": "b5edceab-9cb4-1725-a859-c841824e5a11",
+	"name": "flask_apis",
+	"description": "",
+	"order": [
+		"3be5f805-6844-1723-3bbf-3b19b8b91cb6",
+		"584cafba-80c8-8d53-21f3-08eb77085345",
+		"6765e538-ddca-ba15-adf0-3b6e1b2e93ae",
+		"37bb4410-f480-fa88-9c60-1101078f9ec9",
+		"37ee41b4-5f38-2a44-7acd-f192b5c7eb20",
+		"1760f899-e3c9-c6d6-19ef-d9aa070ed5f5"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1547525318460,
+	"owner": "6386891",
+	"public": false,
+	"requests": [
+		{
+			"id": "1760f899-e3c9-c6d6-19ef-d9aa070ed5f5",
+			"headers": "Authorization: Bearer {{access_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/logout",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Successful POST request\"] = responseCode.code === 201 || responseCode.code === 202;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1547526537082,
+			"name": "/logout",
+			"description": "",
+			"collectionId": "b5edceab-9cb4-1725-a859-c841824e5a11",
+			"responses": []
+		},
+		{
+			"id": "37bb4410-f480-fa88-9c60-1101078f9ec9",
+			"headers": "",
+			"headerData": [],
+			"url": "{{url}}/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "b5edceab-9cb4-1725-a859-c841824e5a11",
+			"data": [
+				{
+					"key": "username",
+					"value": "renato",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "/register",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1547526022971,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"isFromCollection": true,
+			"collectionRequestId": "37ee41b4-5f38-2a44-7acd-f192b5c7eb20"
+		},
+		{
+			"id": "37ee41b4-5f38-2a44-7acd-f192b5c7eb20",
+			"headers": "",
+			"headerData": [],
+			"url": "{{url}}/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "b5edceab-9cb4-1725-a859-c841824e5a11",
+			"data": [
+				{
+					"key": "username",
+					"value": "renato",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "/login",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1547526022971,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "3be5f805-6844-1723-3bbf-3b19b8b91cb6",
+			"headers": "",
+			"headerData": [],
+			"url": "{{url}}/stores",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Successful POST request\"] = responseCode.code === 201 || responseCode.code === 202;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1547526144838,
+			"name": "/stores",
+			"description": "",
+			"collectionId": "b5edceab-9cb4-1725-a859-c841824e5a11",
+			"responses": []
+		},
+		{
+			"id": "584cafba-80c8-8d53-21f3-08eb77085345",
+			"headers": "Authorization: Bearer {{access_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/stores",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "name",
+					"value": "newStore",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1547528327070,
+			"name": "/stores/<name>",
+			"description": "",
+			"collectionId": "b5edceab-9cb4-1725-a859-c841824e5a11",
+			"responses": []
+		},
+		{
+			"id": "6765e538-ddca-ba15-adf0-3b6e1b2e93ae",
+			"headers": "Authorization: Bearer {{access_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/item/piano",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [
+				{
+					"key": "price",
+					"value": "17.99",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1547528308743,
+			"name": "/item/<name>",
+			"description": "",
+			"collectionId": "b5edceab-9cb4-1725-a859-c841824e5a11",
+			"responses": []
+		}
+	]
+}
