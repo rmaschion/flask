@@ -15,6 +15,11 @@ stores = [
     }
 ]
 
+@app.route("/home", defaults={"name":" ENTER YOUR NAME"})
+@app.route("/home/<string:name>")
+def home(name):
+    return jsonify({"message": f"My name is {name}"})
+
 @app.route('/store', methods=['POST'])
 def create_store():
     request_data = request.get_json()
@@ -56,5 +61,5 @@ def get_items_in_store(name):
             return jsonify({'items':store['items']})
     return jsonify({"message": 'store not found'})
 
-app.run(port=5000, debug=True)
+app.run(host="0.0.0.0", port=5000, debug=True)
 
